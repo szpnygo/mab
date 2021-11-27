@@ -1,10 +1,11 @@
 package snow
 
 import (
-	"fmt"
 	"net"
 	"strconv"
 	"strings"
+
+	"github.com/szpnygo/mab/internal/errorx"
 )
 
 func GetLocalIP() (string, error) {
@@ -22,7 +23,7 @@ func GetLocalIP() (string, error) {
 		}
 	}
 
-	return "", fmt.Errorf("can not get the ip")
+	return "", errorx.Errorf("can not get the ip")
 }
 
 func IP4toInt16(ip string) int64 {

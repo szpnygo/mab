@@ -17,7 +17,7 @@ func (r *request) Request() (*response, error) {
 		req, err = http.NewRequest(r.method, r.url, r.body)
 	}
 	if err != nil {
-		r.log("get the error %s ", r.method, err.Error())
+		r.log("get the error %s %s", r.method, err.Error())
 		return nil, err
 	}
 
@@ -30,7 +30,7 @@ func (r *request) Request() (*response, error) {
 
 	resp, err := r.httpClient.Do(req)
 	if err != nil {
-		r.log("get the error %s ", r.method, err.Error())
+		r.log("get the error %s %s", r.method, err.Error())
 		return nil, err
 	}
 

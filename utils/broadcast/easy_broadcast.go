@@ -8,6 +8,7 @@ import (
 
 	"github.com/bwmarrin/snowflake"
 	"github.com/go-redis/redis/v8"
+	"github.com/szpnygo/mab/internal/errorx"
 	"github.com/szpnygo/mab/utils/snow"
 )
 
@@ -132,5 +133,5 @@ func (client *Client) Receive() (string, []byte, error) {
 		return event.Topic, event.Data, nil
 	}
 
-	return "", nil, fmt.Errorf("client closed")
+	return "", nil, errorx.Errorf("client closed")
 }

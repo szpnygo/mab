@@ -1,17 +1,17 @@
 package jwt
 
 import (
-	"errors"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
+	"github.com/szpnygo/mab/internal/errorx"
 )
 
 var (
-	TokenExpired     = errors.New("Token is expired")
-	TokenNotValidYet = errors.New("Token not active yet")
-	TokenMalformed   = errors.New("That's not even a token")
-	TokenInvalid     = errors.New("Couldn't handle this token:")
+	TokenExpired     = errorx.New("Token is expired")
+	TokenNotValidYet = errorx.New("Token not active yet")
+	TokenMalformed   = errorx.New("That's not even a token")
+	TokenInvalid     = errorx.New("Couldn't handle this token:")
 )
 
 type JWTConf struct {
