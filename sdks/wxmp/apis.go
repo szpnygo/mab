@@ -16,3 +16,13 @@ func (helper *WxMpHelper) AccountApi() *apis.AccountApi {
 
 	return apis.NewAccountApi(token)
 }
+
+func (helper *WxMpHelper) UserApi() *apis.UserApi {
+	token, err := helper.Token()
+	if err != nil {
+		errorx.Log(err)
+		log.Fatalf(err.Error())
+	}
+
+	return apis.NewUserApi(token)
+}

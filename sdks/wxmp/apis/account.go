@@ -15,6 +15,7 @@ func NewAccountApi(token string) *AccountApi {
 	}
 }
 
+//https://developers.weixin.qq.com/doc/offiaccount/Account_Management/Generating_a_Parametric_QR_Code.html
 const api_create_qr_code = "https://api.weixin.qq.com/cgi-bin/qrcode/create"
 
 // CreateQRCode 生成用户二维码
