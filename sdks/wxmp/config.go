@@ -3,8 +3,9 @@ package wxmp
 import "github.com/szpnygo/mab/sdks/token"
 
 type WxMpConfig struct {
-	AppID         string
-	AppSecret     string
+	AppID     string
+	AppSecret string
+	// CallBackToken公众号回调校验token
 	CallBackToken string
 }
 
