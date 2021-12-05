@@ -20,8 +20,9 @@ type authApi struct {
 	componentAppID       string // component_appid
 }
 
-func NewAuthApi(token string) *authApi {
+func newAuthApi(componentAppID, token string) *authApi {
 	return &authApi{
+		componentAppID:       componentAppID,
 		componentAccessToken: token,
 	}
 }
