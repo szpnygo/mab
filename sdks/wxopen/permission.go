@@ -3,6 +3,7 @@ package wxopen
 type PermissionType int
 
 // 小程序权限集
+// https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/2.0/product/miniprogram_authority.html
 const (
 	//获取小程序码
 	//基于该权限可获取小程序码和小程序二维码
@@ -35,4 +36,45 @@ const (
 	//好物圈管理
 	//基于该权限将小程序的物品、订单、收藏等信息同步至好物圈
 	MINIAPP_GOOD_PRODUCT PermissionType = 41
+	//微信物流服务
+	//基于该权限可以使用发货、查询组件、消息组件等微信物流服务
+	MINIAPP_LOGISTICS PermissionType = 45
+	//小程序搜索
+	//基于该权限可将小程序页面推送给搜索引擎，增加小程序页面在搜索的收录与曝光机会
+	MINIAPP_SEARCH PermissionType = 57
+	//小程序广告管理
+	//基于该权限可为小程序广告主进行微信广告的投放和管理
+	MINIAPP_AD PermissionType = 65
+	//获取小程序链接
+	//基于该权限可获取小程序URL Scheme、URL Link以及Short Link，从而实现从短信、邮件、微信外网页等场景打开小程序以及在微信内拉起小程序
+	MINIAPP_LINK PermissionType = 88
+)
+
+//公众号权限集
+//https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/2.0/product/offical_account_authority.html
+const (
+	//消息管理权限
+	//帮助公众号接收用户消息，进行人工客服回复或自动回复
+	OFFICIAL_ACCOUNTS_MESSAGES PermissionType = 1
+	//用户管理权限
+	//帮助公众号获取用户信息，进行用户管理
+	OFFICIAL_ACCOUNTS_USER PermissionType = 2
+	//帐号服务权限
+	//帮助认证、设置公众号，进行帐号管理
+	OFFICIAL_ACCOUNTS_ACCOUNT PermissionType = 3
+	//网页服务权限
+	//帮助公众号实现第三方网页服务和活动
+	OFFICIAL_ACCOUNTS_WEB PermissionType = 4
+	//群发与通知权限
+	//帮助公众号进行群发和模板消息业务通知
+	OFFICIAL_ACCOUNTS_TOAST PermissionType = 7
+	//微信扫一扫权限
+	//助公众号使用微信扫一扫
+	OFFICIAL_ACCOUNTS_SCAN PermissionType = 9
+	//素材管理权限
+	//帮助公众号管理多媒体素材，用于客服等业务
+	OFFICIAL_ACCOUNTS_MATERIAL PermissionType = 11
+	//小程序管理权限
+	//可新增关联小程序，并对公众号已关联的小程序进行管理
+	OFFICIAL_ACCOUNTS_MINIAPP PermissionType = 33
 )
